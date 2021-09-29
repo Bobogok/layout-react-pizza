@@ -1,0 +1,54 @@
+.button {
+  display: flex;
+  padding: 12px 25px;
+  line-height: 23px;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &__price {
+  }
+  &__delimiter {
+    width: 1px;
+    height: 25px;
+    margin: 0 14px;
+    background-color: $white;
+    opacity: 0.25;
+  }
+  &__icon {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+  &__counter {
+  }
+
+  &,
+  span {
+    color: #fff;
+  }
+
+  i,
+  span,
+  path,
+  svg {
+    transition: all $duration ease-in-out;
+  }
+
+  &:hover {
+    background-color: darken($main, 8%);
+  }
+
+  &:active {
+    background-color: darken($main, 12%);
+    transform: translateY(1px);
+  }
+
+  &--cart {
+    align-items: center;
+    background-color: $main;
+
+    span {
+      font-weight: 600;
+      line-height: 19px;
+    }
+  }
+}

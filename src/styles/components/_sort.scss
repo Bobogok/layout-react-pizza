@@ -1,0 +1,44 @@
+.sort {
+  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 8px;
+  }
+  &__text {
+    margin-right: 8px;
+  }
+  &__choice {
+    color: $main;
+    border-bottom: 1px dashed $main;
+    cursor: pointer;
+  }
+  &__popup {
+    position: absolute;
+    right: 0;
+    width: 160px;
+    margin-top: 10px;
+    padding: 13px 0;
+    overflow: hidden;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+  }
+  &__items {
+    overflow: hidden;
+  }
+  &__item {
+    padding: 12px 20px;
+    cursor: pointer;
+    &--active,
+    &:hover {
+      color: $main;
+      font-weight: bold;
+    }
+    &:hover {
+      background: rgba(254, 95, 30, 0.05);
+    }
+  }
+}

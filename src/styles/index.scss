@@ -4,6 +4,14 @@
 @import 'vars';
 @import 'global';
 
+@import 'components/all';
 
+.content {
+  padding: 40px 0;
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+}
 
 @import 'media';
