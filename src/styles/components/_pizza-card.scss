@@ -1,0 +1,61 @@
+.pizza-card {
+  width: 280px;
+  text-align: center;
+
+  &__image {
+    margin-bottom: 11px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    margin-bottom: 22px;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1%;
+  }
+  &__selector {
+    margin-bottom: 17px;
+    padding: 6px;
+    color: $content;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    background: $lightGrey;
+    border-radius: 10px;
+  }
+  &__top-selector {
+    display: flex;
+    margin-bottom: 7px;
+  }
+  &__top-elem {
+    flex: 1 1 auto;
+    padding: 8px;
+    &--active {
+      background: $white;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+  }
+  &__bottom-selector {
+    display: flex;
+  }
+  &__bottom-elem {
+    flex: 1 1 auto;
+    padding: 8px;
+    &--active {
+      background: $white;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+  }
+}

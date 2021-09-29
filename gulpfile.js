@@ -82,9 +82,12 @@ function styles() {
 }
 
 function build() {
-  return src(['public/css/style.min.css', 'public/fonts/**/*', 'public/js/app.min.js', 'public/index.html'], {
-    base: 'public'
-  })
+  return src(
+    ['public/css/style.min.css', 'public/fonts/**/*', 'public/js/app.min.js', 'public/index.html', 'public/cart.html'],
+    {
+      base: 'public'
+    }
+  )
     .pipe(size())
     .pipe(dest('dist'));
 }

@@ -1,12 +1,12 @@
 .button {
   display: flex;
-  padding: 12px 25px;
+  padding: 10px 20px;
   line-height: 23px;
+  border: 1px solid transparent;
   border-radius: 30px;
   cursor: pointer;
+  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
 
-  &__price {
-  }
   &__delimiter {
     width: 1px;
     height: 25px;
@@ -18,12 +18,10 @@
     margin-right: 8px;
     margin-bottom: 4px;
   }
-  &__counter {
-  }
 
   &,
   span {
-    color: #fff;
+    color: $white;
   }
 
   i,
@@ -33,6 +31,107 @@
     transition: all $duration ease-in-out;
   }
 
+  &--cart {
+    align-items: center;
+    padding: 12px 25px;
+    background-color: $main;
+
+    span {
+      font-weight: 600;
+      line-height: 19px;
+    }
+  }
+
+  &--add {
+    align-items: center;
+
+    span {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+
+    i {
+      position: relative;
+      left: 6px;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      color: $white;
+      font-weight: 600;
+      font-size: 13px;
+      font-style: normal;
+      line-height: 22px;
+      background-color: $main;
+      border-radius: 30px;
+    }
+
+    &:hover {
+      i {
+        color: $main;
+        background-color: $white;
+      }
+    }
+  }
+
+  &--outline {
+    background-color: $white;
+    border-color: $main;
+
+    &,
+    span {
+      color: $main;
+    }
+
+    svg {
+      path {
+        fill: $main;
+      }
+    }
+
+    &:hover {
+      background-color: $main;
+
+      &,
+      span {
+        color: $white;
+      }
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    &:active {
+      background-color: darken($main, 8%);
+    }
+  }
+
+  &--circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0;
+    border-width: 2px;
+  }
+
+  &--black {
+    background-color: $black;
+
+    &:hover,
+    &:active {
+      background-color: lighten($color: $black, $amount: 10);
+    }
+  }
+
   &:hover {
     background-color: darken($main, 8%);
   }
@@ -40,15 +139,5 @@
   &:active {
     background-color: darken($main, 12%);
     transform: translateY(1px);
-  }
-
-  &--cart {
-    align-items: center;
-    background-color: $main;
-
-    span {
-      font-weight: 600;
-      line-height: 19px;
-    }
   }
 }

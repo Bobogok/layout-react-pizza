@@ -1,0 +1,61 @@
+.cart-pizza {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #f6f6f6;
+  &__item-img {
+    margin-right: 15px;
+  }
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+  }
+  &__item-title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+  }
+  &__description {
+    color: #8d8d8d;
+    font-size: 18px;
+  }
+  &__item-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13%;
+  }
+  &__item-counter {
+    font-size: 22px;
+  }
+  &__item-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+  }
+  &__item-remove {
+    display: flex;
+    align-items: center;
+  }
+  &__item-button {
+    border-color: #ddd;
+    svg {
+      transform: rotate(45deg);
+      path {
+        fill: darken($color: #ddd, $amount: 15);
+      }
+    }
+    &:hover,
+    &:active {
+      background-color: darken($color: #ddd, $amount: 80);
+      border-color: darken($color: #ddd, $amount: 80);
+    }
+  }
+}
